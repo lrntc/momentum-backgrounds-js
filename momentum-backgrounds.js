@@ -47,9 +47,10 @@ let momentumBackgrounds = {
     const smallestDiff = Math.min(...timeDiff);
 
     //Get the index to fetch the background url
-    const momentsIndex = timeDiff.findIndex((elm) => {
-      if (elm == smallestDiff) {
-        return elm;
+    let momentsIndex = 0;
+    timeDiff.find((elm, i) => {
+      if (parseInt(elm) == parseInt(smallestDiff)) {
+        momentsIndex = i;
       }
     })
 

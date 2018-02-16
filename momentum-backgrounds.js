@@ -25,7 +25,7 @@ let momentumBackgrounds = {
 
       momentumBackgrounds.state.elm = document.getElementById(elm);
       const bg = momentumBackgrounds.getBackground();
-      momentumBackgrounds.state.elm.style.backgroundImage = "url('" + bg + "')";
+      momentumBackgrounds.state.elm.style.backgroundImage = 'url(' + bg + ')';
 
     } else {
       console.log('momentumBackgrounds: Please define your anchor element')

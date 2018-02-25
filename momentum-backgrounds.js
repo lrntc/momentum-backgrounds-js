@@ -19,16 +19,19 @@ let momentumBackgrounds = {
       }
     ]
   },
-  init: (elm, moments = {}) => { //TODO add support for custom moments
+  init: (selector, moments = {}) => { //TODO add support for custom moments
+
+    //Check if element excists before doing something else
+    let elm = document.getElementById(elm);
 
     if (elm) {
 
-      momentumBackgrounds.state.elm = document.getElementById(elm);
+      momentumBackgrounds.state.elm = elm;
       const bg = momentumBackgrounds.getBackground();
       momentumBackgrounds.state.elm.style.backgroundImage = 'url(' + bg + ')';
 
     } else {
-      console.log('momentumBackgrounds: Please define your anchor element')
+      console.log('momentumBackgrounds: DOMelement not found')
     }
 
   },
